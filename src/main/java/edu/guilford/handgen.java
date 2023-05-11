@@ -43,7 +43,6 @@ public class handgen {
     public int getCard3() {
         return card3;
     }
-    
 
     // method to play the game
     public static String playGame() {
@@ -80,30 +79,30 @@ public class handgen {
             // save the wins under an array
 
             // if statements to determine the winner
-             result = "Dealer's cards: " + dealerCard1 + " " + dealerCard2 + " " + dealerCard3;
+            result = "Dealer's cards: " + dealerCard1 + " " + dealerCard2 + " " + dealerCard3;
             result += "\n" + "Player's cards: " + playerCard1 + " " + playerCard2 + " " + playerCard3;
             // print the dealer and player totals
-            result += "\n"+"Dealer's total: " + dealerTotal;
+            result += "\n" + "Dealer's total: " + dealerTotal;
             result += "\n" + "Player's total: " + playerTotal;
 
             if (dealerBust && playerBust) {
-                
+
                 playerwins[index] = "Tie";
             } else if (dealerBust) {
-                
+
                 playerwins[index] = "Player";
             } else if (playerBust) {
-               
+
                 playerwins[index] = "Dealer";
             } else if (dealerWin) {
-                
+
                 playerwins[index] = "Dealer";
             } else if (playerWin) {
-                
+
                 playerwins[index] = "Player";
 
             } else if (dealerTie) {
-               
+
                 playerwins[index] = "Tie";
 
             }
@@ -111,13 +110,13 @@ public class handgen {
             n += 1;
 
         }
-        //getter for result
-        
+        // getter for result
+
         // toString method to print the array
         System.out.println("Results of the game \n" + java.util.Arrays.toString(playerwins));
         System.out.print(result);
         // return playerwins string
-        String resultString = (result + "\n" + java.util.Arrays.toString( playerwins ));
+        String resultString = (result + "\n" + java.util.Arrays.toString(playerwins));
         return resultString;
     }
     // method to get the hand
